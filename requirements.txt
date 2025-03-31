@@ -1,0 +1,11 @@
+fastapi
+motor
+pydantic
+passlib
+python-jose
+python-dotenv
+bcrypt
+shortuuid
+pymongo
+google-auth
+google-api-python-client
