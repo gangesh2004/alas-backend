@@ -4,8 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # Importing route modules from different submodules
 from .auth.routes import router as auth_router
 # from .profile.routes import router as profile_router
-# from .patient.routes import router as patient_router
-# from .report.routes import router as report_router
+from .qna.routes import router as qna_router
 from .admin.routes import router as admin_router
 
 # Create an instance of the FastAPI class
@@ -32,8 +31,7 @@ app.add_middleware(
 app.include_router(admin_router, prefix="/api/admin", tags=["Admin"])
 app.include_router(auth_router, prefix="/api/auth", tags=["Auth"])
 # app.include_router(profile_router, prefix="/api/profile", tags=["Profile"])
-# app.include_router(patient_router, prefix="/api/patient", tags=["Patient"])
-# app.include_router(report_router, prefix="/api/report", tags=["Report"])
+app.include_router(qna_router, prefix="/api/qna", tags=["Questions & Assessments"])
 
 # Define a root endpoint
 @app.get("/")

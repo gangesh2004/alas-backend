@@ -15,7 +15,8 @@ admin_collection = database.get_collection("admin")
 # Users Collection: Stores information about doctors and other users
 users_collection = database.get_collection("users")
 
-# Patients Collection: Stores patient-related data
+# Teachers Collection: Stores patient-related data
 teachers_collection = database.get_collection("teachers")
 
-
+# Questions and Answers collection
+questions_collection = database.get_collection("qna")
